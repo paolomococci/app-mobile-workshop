@@ -29,11 +29,19 @@ class Person {
     required String role,
     required String name,
     required String surname,
+    required int age,
   }) {
-    return Employee(role, name, surname);
+    return Employee(role, name, surname, age);
   }
 }
 
 class Employee extends Person {
-  Employee(String role, String name, String surname) : super('', '', 0);
+  final String _role;
+
+  Employee(this._role, String name, String surname, int age) : super('', '', 0);
+
+  @override
+  String toString() {
+    return '$_role. ${super.toString()}';
+  }
 }
