@@ -51,10 +51,19 @@ abstract class Greeter {
 }
 
 mixin DefaultGreeter implements Greeter {
-  String get name;
+  String get person;
 
   @override
   String sayHello() {
-    return 'Hello $name';
+    return 'Hello $person';
   }
+}
+
+class Welcome with DefaultGreeter {
+  final Person _person;
+
+  Welcome(this._person);
+
+  @override
+  String get person => _person.toString();
 }
