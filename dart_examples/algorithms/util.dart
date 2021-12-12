@@ -49,3 +49,12 @@ class Employee extends Person {
 abstract class Greeter {
   String sayHello();
 }
+
+mixin DefaultGreeter implements Greeter {
+  String get name;
+
+  @override
+  String sayHello() {
+    return 'Hello $name';
+  }
+}
