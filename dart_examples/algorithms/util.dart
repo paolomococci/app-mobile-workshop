@@ -45,3 +45,7 @@ class Employee extends Person {
     return '$_role. ${super.toString()}';
   }
 }
+
+abstract class Greeter {
+  String sayHello();
+}
