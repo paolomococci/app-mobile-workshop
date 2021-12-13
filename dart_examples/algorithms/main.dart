@@ -32,7 +32,11 @@ List<Map> data = [
 ];
 
 void main() {
-  classPlayground();
+  algorithmsPlayground();
 }
 
-void classPlayground() {}
+void algorithmsPlayground() {
+  sortingPlayground();
+}
+
+void sortingPlayground() {}
