@@ -31,6 +31,17 @@ List<Map> data = [
   {'name': 'Mark', 'surname': 'Flee', 'age': 21},
 ];
 
+List<Person> stronglyTypedModelOfPeopleList() {
+  final people = data.map<Person>((Map personMap) {
+    final name = personMap['name'];
+    final surname = personMap['surname'];
+    final age = personMap['age'];
+    return Person(name, surname, age);
+  }).toList();
+
+  return people;
+}
+
 void main() {
   algorithmsPlayground();
 }
