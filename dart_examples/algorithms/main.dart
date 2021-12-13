@@ -59,4 +59,12 @@ void reducingPlayground() {}
 
 void filteringPlayground() {}
 
-void sortingPlayground() {}
+void sortingPlayground() {
+  final people = stronglyTypedModelOfPeopleList();
+
+  people.sort((a, b) => a.surname.compareTo(b.surname));
+
+  print('');
+  print('people in alphabetical order by surname:');
+  people.forEach(print);
+}
