@@ -39,7 +39,10 @@ void algorithmsPlayground() {
   sortingPlayground();
   filteringPlayground();
   reducingPlayground();
+  flatteningPlayground();
 }
+
+void flatteningPlayground() {}
 
 void reducingPlayground() {}
 
