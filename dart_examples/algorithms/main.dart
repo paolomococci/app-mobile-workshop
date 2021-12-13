@@ -37,6 +37,9 @@ void main() {
 
 void algorithmsPlayground() {
   sortingPlayground();
+  filteringPlayground();
 }
+
+void filteringPlayground() {}
 
 void sortingPlayground() {}
