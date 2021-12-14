@@ -55,7 +55,17 @@ void algorithmsPlayground() {
 
 void flatteningPlayground() {}
 
-void reducingPlayground() {}
+void reducingPlayground() {
+  /* I collect all ages of people registered in the system */
+  final ages = data.map<int>((person) => person['age']);
+  final sum = ages.reduce((sum, age) => sum + age);
+  final numericalAverageOfAges = sum / ages.length;
+  final int roundedAverageAge = numericalAverageOfAges.round();
+
+  print('');
+  print(
+      'The average age of the people registered in the system is: $roundedAverageAge');
+}
 
 void filteringPlayground(String filterChar) {
   final people = stronglyTypedModelOfPeopleList();
