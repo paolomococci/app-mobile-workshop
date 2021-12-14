@@ -53,13 +53,25 @@ void algorithmsPlayground() {
   flatteningPlayground();
 }
 
-void flatteningPlayground() {}
+void flatteningPlayground() {
+  /* how to take a two-dimensional matrix and flatten it into a single linear list */
+  final twoDimensionalMatrix = [
+    [1, 2, 3],
+    [0, 1, 0],
+    [3, 2, 1]
+  ];
+  final vector = twoDimensionalMatrix.expand<int>((row) => row);
+
+  print('');
+  print(
+      'A two-dimensional matrix: $twoDimensionalMatrix flattened as a vector: $vector');
+}
 
 void reducingPlayground() {
   /* I collect all ages of people registered in the system */
-  final ages = data.map<int>((person) => person['age']);
-  final sum = ages.reduce((sum, age) => sum + age);
-  final numericalAverageOfAges = sum / ages.length;
+  final Iterable<int> ages = data.map<int>((person) => person['age']);
+  final int sum = ages.reduce((sum, age) => sum + age);
+  final double numericalAverageOfAges = sum / ages.length;
   final int roundedAverageAge = numericalAverageOfAges.round();
 
   print('');
