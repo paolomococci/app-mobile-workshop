@@ -48,7 +48,7 @@ void main() {
 
 void algorithmsPlayground() {
   sortingPlayground();
-  filteringPlayground();
+  filteringPlayground('D');
   reducingPlayground();
   flatteningPlayground();
 }
@@ -57,7 +57,15 @@ void flatteningPlayground() {}
 
 void reducingPlayground() {}
 
-void filteringPlayground() {}
+void filteringPlayground(String filterChar) {
+  final people = stronglyTypedModelOfPeopleList();
+  final filteredPeople =
+      people.where((person) => person.surname.startsWith(filterChar));
+
+  print('');
+  print('List of people whose surname begins with the letter: $filterChar:');
+  filteredPeople.forEach(print);
+}
 
 void sortingPlayground() {
   final people = stronglyTypedModelOfPeopleList();
